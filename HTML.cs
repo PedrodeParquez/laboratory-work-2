@@ -5,23 +5,23 @@ namespace SecondLab {
     int DocumentHTMLFileNumberOfRows, DocumentHTMLFileNumberOfSymbols;
 
     public HTML(string DocumentName, string DocumentAuthor, string DocumentKeyWords,
-      string DocumentTopic, string DocumentPath) {
+      string DocumentPath, string DocumentTopic) {
       this.DocumentName = DocumentName;
       this.DocumentAuthor = DocumentAuthor;
       this.DocumentKeyWords = DocumentKeyWords;
-      this.DocumentTopic = DocumentTopic;
       this.DocumentPath = DocumentPath;
-
+      this.DocumentTopic = DocumentTopic;
+    
       Console.Write("Введите количество строк: ");
-      DocumentHTMLFileNumberOfRows = Convert.ToInt32(Console.ReadLine());
+      DocumentHTMLFileNumberOfRows = int.Parse(Console.ReadLine());
 
       Console.WriteLine("Введите количество символов: ");
-      DocumentHTMLFileNumberOfSymbols = Convert.ToInt32(Console.ReadLine());
+      DocumentHTMLFileNumberOfSymbols = int.Parse(Console.ReadLine());
     }
 
     public override void DocumentInfo() {
       Console.WriteLine($"Имя файла: {DocumentName}\nАвтор: {DocumentAuthor}\nТема: {DocumentTopic} + " +
-        $"Ключевые слова: {DocumentKeyWords}\nПуть к файлу: {DocumentPath}\nКоличество строк: {DocumentHTMLFileNumberOfRows}" +
+        $" Путь к файлу: {DocumentPath}\nКлючевые слова: {DocumentKeyWords}\nКоличество строк: {DocumentHTMLFileNumberOfRows}" +
         $"\nКоличество символов: {DocumentHTMLFileNumberOfSymbols}");
     }
   }

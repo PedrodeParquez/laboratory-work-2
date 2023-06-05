@@ -2,11 +2,11 @@
 
 namespace SecondLab {
   class Document {
-    public string DocumentName, DocumentAuthor, DocumentKeyWords, DocumentTopic, DocumentPath;
+    public string DocumentName, DocumentAuthor, DocumentKeyWords, DocumentPath, DocumentTopic;
 
     public virtual void DocumentInfo() {
-      Console.WriteLine($"Имя файла: {DocumentName}\nАвтор: {DocumentAuthor}\nТема: {DocumentTopic} + " +
-        $"Ключевые слова: {DocumentKeyWords}\nПуть к файлу: {DocumentPath}");
+      Console.WriteLine($"Имя файла: {DocumentName}\nАвтор: {DocumentAuthor}\n \n Ключевые слова: {DocumentKeyWords}\n" +
+        $"Путь к файлу: {DocumentPath}\nТема: {DocumentTopic}\n");
     }
   }
 }

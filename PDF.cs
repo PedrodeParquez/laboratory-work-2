@@ -6,24 +6,24 @@ namespace SecondLab {
     int DocumentPDFNumberOfPages;
 
     public PDF(string DocumentName, string DocumentAuthor, string DocumentKeyWords,
-      string DocumentTopic, string DocumentPath) {
+      string DocumentPath, string DocumentTopic) {
       this.DocumentName = DocumentName;
       this.DocumentAuthor = DocumentAuthor;
       this.DocumentKeyWords = DocumentKeyWords;
-      this.DocumentTopic = DocumentTopic;
       this.DocumentPath = DocumentPath;
-
+      this.DocumentTopic = DocumentTopic;
+      
       Console.Write("Введите версию PDF файл: ");
       DocumentPDFVersion = Console.ReadLine();
 
       Console.WriteLine("Введите количество страниц: ");
-      DocumentPDFNumberOfPages = Convert.ToInt32(Console.ReadLine());
+      DocumentPDFNumberOfPages = int.Parse(Console.ReadLine());
     }
      
     public override void DocumentInfo() {
-      Console.WriteLine($"Имя файла: {DocumentName}\nАвтор: {DocumentAuthor}\nТема: {DocumentTopic} + " + 
-        $"Ключевые слова: {DocumentKeyWords}\nПуть к файлу: {DocumentPath}\nВерсия PDF: {DocumentPDFVersion}" +
-        $"\nКоличество страниц: {DocumentPDFNumberOfPages}");
+      Console.WriteLine($"Имя файла: {DocumentName}\nАвтор: {DocumentAuthor}\n + " + 
+        $"Ключевые слова: {DocumentKeyWords}\nПуть к файлу: {DocumentPath}\nТема: {DocumentTopic}\n" +
+        $"Версия PDF: {DocumentPDFVersion}\nКоличество страниц: {DocumentPDFNumberOfPages}");
     }
   }
 }

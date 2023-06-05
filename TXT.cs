@@ -5,24 +5,24 @@ namespace SecondLab {
     int DocumentTxtFileNumberOfRows, DocumentTxtFileNumberOfSymbols;
     
     public TXT(string DocumentName, string DocumentAuthor, string DocumentKeyWords,
-      string DocumentTopic, string DocumentPath) {
-      this.DocumentName = DocumentName
+      string DocumentPath, string DocumentTopic) {
+      this.DocumentName = DocumentName;
       this.DocumentAuthor = DocumentAuthor;
       this.DocumentKeyWords = DocumentKeyWords;
-      this.DocumentTopic = DocumentTopic;
       this.DocumentPath = DocumentPath;
+      this.DocumentTopic = DocumentTopic;
 
       Console.WriteLine("Введите количество символов: ");
-      DocumentTxtFileNumberOfSymbols = Convert.ToInt32(Console.ReadLine());
+      DocumentTxtFileNumberOfSymbols = int.Parse(Console.ReadLine());
 
       Console.Write("Введите количество строк: ");
-      DocumentTxtFileNumberOfRows = Convert.ToInt32(Console.ReadLine());    
+      DocumentTxtFileNumberOfRows = int.Parse(Console.ReadLine());    
     }
 
     public override void DocumentInfo() {
       Console.WriteLine($"Имя файла: {DocumentName}\nАвтор: {DocumentAuthor}\nТема: {DocumentTopic} + " +
-        $"Ключевые слова: {DocumentKeyWords}\nПуть к файлу: {DocumentPath}\nКоличество символов: {DocumentTxtFileNumberOfSymbols}" +
-        $"\nКоличество строк: {DocumentTxtFileNumberOfRows}");
+        $"Путь к файлу: {DocumentPath}\nКлючевые слова: {DocumentKeyWords}\n" +
+        $"Количество символов: {DocumentTxtFileNumberOfSymbols}\nКоличество строк: {DocumentTxtFileNumberOfRows}");
     }
   }
 }

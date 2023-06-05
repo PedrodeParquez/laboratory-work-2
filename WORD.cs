@@ -4,11 +4,11 @@ namespace SecondLab {
   class WORD : Document {
     string DocumentWordPageCount, DocumentWordUsedFonts;
 
-    public WORD(string DocumentName, string DocumentAuthor, string DocumentKeyWord, string DocumentPath,
-      string DocumentTopic) {
+    public WORD(string DocumentName, string DocumentAuthor, string DocumentKeyWords, 
+      string DocumentPath, string DocumentTopic) {
       this.DocumentName = DocumentName;
       this.DocumentAuthor = DocumentAuthor;
-      this.DocumentKeyWord = DocumentKeyWord;
+      this.DocumentKeyWords = DocumentKeyWords;
       this.DocumentPath = DocumentPath;
       this.DocumentTopic = DocumentTopic;
 
@@ -20,7 +20,7 @@ namespace SecondLab {
     }
 
     public override void DocumentInfo() {
-      Console.WriteLine($"\nИмя: {DocumentName}\nАвтор: {DocumentAuthor}\nКлючевые слова: {DocumentKeyWord}\n" +
+      Console.WriteLine($"\nИмя: {DocumentName}\nАвтор: {DocumentAuthor}\nКлючевые слова: {DocumentKeyWords}\n" +
         $"Путь к файлу: {DocumentPath}\nТема документа: {DocumentTopic}\nКоличество страниц: {DocumentWordPageCount}\n" +
         $"Используемые шрифты: {DocumentWordUsedFonts}");
     }
